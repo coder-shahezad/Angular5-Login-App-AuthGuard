@@ -1,0 +1,80 @@
+<div class="container mt-5 mb-5">
+  <div class="row mb-20">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 offset-md-3 offset-lg-3">
+      <h1 class="text-center">Registration</h1>
+    </div>
+  </div>
+  <form (ngSubmit)="f.form.valid && register(f)" #f="ngForm" novalidate>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2">
+        <div class="login-form">
+          <div class="row mb-20">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 border-rigth">
+              <div class="form-group">
+                <label for="firstName" class="form-lable">First Name</label>
+                <input type="text" id="firstName" ngModel name="firstName" #firstName="ngModel" required class="form-control">
+                <div *ngIf="!firstName.valid && firstName.touched">
+                  <div *ngIf="firstName.errors.required">
+                    <div class="talk-bubble tri-right round left-top">
+                      <div class="talktext">
+                        <p>Please enter a first name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lastName" class="form-lable">Last Name</label>
+                <input type="text" id="lastName" ngModel name="lastName" #lastName="ngModel" required class="form-control">
+                <div *ngIf="!lastName.valid && lastName.touched">
+                  <div *ngIf="lastName.errors.required">
+                    <div class="talk-bubble tri-right round left-top">
+                      <div class="talktext">
+                        <p>Please enter a last name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <label for="rgs-userName" class="form-lable">Username</label>
+                <input email id="rgs-userName" ngModel name="username" #username="ngModel" required class="form-control">
+                <div *ngIf="!username.valid && username.touched">
+                  <div *ngIf="username.control.errors.email">
+                    <div class="talk-bubble tri-right round left-top">
+                      <div class="talktext">
+                        <p>Please enter a valid username</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="rgs-password" class="form-lable">Password</label>
+                <input type="password" id="rgs-password" ngModel name="password" #password="ngModel" required class="form-control">
+                <div *ngIf="!password.valid && password.touched">
+                  <div *ngIf="password.errors.required">
+                    <div class="talk-bubble tri-right round left-top">
+                      <div class="talktext">
+                        <p>Please enter a password</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 offset-lg-3 offset-md-3 mb-20">
+              <button class="btn btn-primary btn-block" type="submit" [disabled]="!f.valid">Register</button>
+              <a class="btn btn-info btn-block" [routerLink]="['/login']">Back to Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

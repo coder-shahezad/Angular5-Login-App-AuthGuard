@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "firstName": "Faran",
+      "lastName": "Shaikh",
+      "userName": "faran@gmail.com",
+      "password": "faran",
+      "id": "1fYlgfl"
+    },
+    {
+      "firstName": "shahezad",
+      "lastName": "chaudhari",
+      "userName": "shahezads90@gmail.com",
+      "password": "12345",
+      "id": "kXRlG38"
+    },
+    {
+      "firstName": "arsalan",
+      "lastName": "shaikh",
+      "userName": "arsalan@gmail.com",
+      "password": "arsalan",
+      "id": "SPOjQeJ"
+    },
+    {
+      "firstName": "adil",
+      "lastName": "chaudhari",
+      "userName": "adil@gmail.com",
+      "password": "adil",
+      "id": "BC4PFVo"
+    },
+    {
+      "firstName": "sohel",
+      "lastName": "ch\\",
+      "userName": "sohel@gmail.ocm",
+      "password": "sohel",
+      "id": "mx811km"
+    }
+  ]
+}

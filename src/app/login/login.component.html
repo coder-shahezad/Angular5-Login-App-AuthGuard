@@ -1,0 +1,46 @@
+<div class="container mt-5 mb-5">
+  <div class="row mb-20">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 offset-md-3 offset-lg-3">
+      <h1 class="text-center">Login</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 offset-md-4 offset-lg-4">
+      <div class="login-form">
+        <form name="form" (ngSubmit)="f.form.valid && login(f)" #f="ngForm" novalidate>
+          <div class="form-group">
+            <label for="userName" class="form-lable">UserName</label>
+            <input email class="form-control" name="username" ngModel #username="ngModel" required />
+            <div *ngIf="!username.valid && username.touched">
+              <div *ngIf="username.control.errors.email">
+                <div class="talk-bubble tri-right round left-top">
+                  <div class="talktext">
+                    <p>Please enter a valid username</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-lable">Password</label>
+            <input type="password" class="form-control" name="password" ngModel #password="ngModel" required />
+            <div *ngIf="!password.valid && password.touched">
+              <div *ngIf="password.errors.required">
+                <div class="talk-bubble tri-right round left-top">
+                  <div class="talktext">
+                    <p>Please enter a password</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button [disabled]="!f.valid" class="btn btn-primary btn-block">Login</button>
+            <div class="text-center" style="color:#fff;">OR</div>
+            <a [routerLink]="['/register']" class="btn btn-danger btn-block">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
